@@ -1,0 +1,125 @@
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Manrope, sans-serif;
+  font-weight: 800;
+}
+
+/* Seperator */
+hr {
+  opacity: 0.3;
+}
+
+.separator {
+  width: 100%;
+}
+.chips {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  position: relative;
+  bottom: 0.7rem;
+  background-color: var(--dark-grayish-blue);
+  width: fit-content;
+  margin: auto;
+  padding: 0 1rem 0 1rem;
+}
+.chip {
+  width: 0.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+/* Advice */
+.advice-container {
+  background-color: var(--dark-grayish-blue);
+  padding: 5rem;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  gap: 2.5rem;
+  max-width: 50%;
+}
+
+@media only screen and (max-width: 375px) {
+  .advice-container {
+    max-width: 25%;
+  }
+}
+
+.advice-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+#adviceNumberElement {
+  color: var(--neon-green);
+  letter-spacing: 0.25rem;
+}
+
+#adviceTextElement {
+  color: var(--light-cyan);
+  font-size: 28px;
+}
+
+/* Dice */
+.dice-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  color: var(--grayish-blue);
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  bottom: 1.5rem;
+  position: relative;
+  background-color: var(--neon-green);
+}
+
+.dice-icon:hover {
+  box-shadow: var(--neon-green) 0 0 2rem 0.25rem;
+}
+
+/* Loading Spinner */
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
